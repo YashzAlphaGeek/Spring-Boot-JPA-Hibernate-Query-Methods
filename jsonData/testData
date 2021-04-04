@@ -1,0 +1,75 @@
+[
+     {
+        "carName": "Hyundai Genesis",
+        "carColor":"White",
+        "carFromYear":2010,
+        "carToYear":2011,
+        "carRank":1,
+        "carMpg":50,
+        "carReviewPoints":5,
+        "carType": "AWD(All Wheel Drive) Type",
+        "carDesc": "Hyundai Genesis G80 is a lavish midsize sedan worth considering. 2017–2019 models with the 3.8L V6 offer available AWD, but if you want brawnier performance, 2018-2019 G80s with the 5.0L V8 can also be equipped with AWD",
+        "features": [
+            "Dual-zone automatic climate control ",
+            "Leather-wrapped steering wheel",
+            "Navigation system",
+            "Eight-inch touchscreen with Apple CarPlay® and Android Auto™ integration",
+            "Forward collision warning with brake assist"
+        ]
+    },
+    {
+        "carName": "Ford Taurus",
+        "carColor":"Green",
+        "carFromYear":2009,
+        "carToYear":2011,
+         "carRank":2,
+         "carMpg":40,
+        "carReviewPoints":4,
+        "carType": "AWD(All Wheel Drive) Type",
+        "carDesc": "Comfortable and roomy, the Ford Taurus is a large sedan with a plush interior that's practical for your daily commute. 2017–2019 SEL and Limited trims use a 288-hp 3.5L V6 with optional AWD, or you can step up to Taurus SHO, which features standard AWD",
+        "features": [
+            "10-way power front seats with driver seat memory",
+            "Heated and cooled front seats",
+            "Rear-window power sunshade",
+            "SYNC® 3 infotainment system with eight-inch touchscreen display",
+            "Blind-spot monitor with cross-traffic alert"
+        ]
+    },
+    {
+        "carName": "Mini Cooper Clubman",
+        "carColor":"Red",
+        "carFromYear":2008,
+        "carToYear":2011,
+         "carRank":3,
+         "carMpg":20,
+        "carReviewPoints":5,
+        "carType": "FWD(Four Wheel Drive) Type",
+        "carDesc": "If you love the punchy driving characteristics of a Mini Cooper but need cargo space and legroom for rear-seat passengers, the Clubman is a stretched-out version that could be right for you",
+        "features": [
+            "18-inch wheels",
+            "LED headlights",
+            "Rear spoiler",
+            "Sport-tuned suspension",
+            "Simulated suede and cloth upholstery"
+        ]
+    },
+    {
+        "carId": 5,
+        "carColor":"Grey",
+        "carFromYear":2019,
+        "carToYear":2020,
+         "carRank":6,
+         "carMpg":10,
+        "carReviewPoints":3,
+        "carName": "Dodge Charger",
+        "carType": "AWD(All Wheel Drive) Type",
+        "carDesc": "The Dodge Charger has the sporty characteristics you crave with the four-season capability you want. You can find AWD versions on certain Charger trims, like the SE (2017), GT (2018), and SXT (2017 and 2019)",
+        "features": [
+            "19-inch aluminum wheels",
+            "LED fog lights",
+            "Dual-zone automatic climate control",
+            "Cloth upholstery",
+            "Uconnect® 4C system with an 8.4-inch touchscreen"
+        ]
+    }
+]

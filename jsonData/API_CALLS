@@ -1,0 +1,68 @@
+Creating a Car:
+POST A CAR : http://localhost:8080/api/createCar
+
+Creating Cars:
+POST ALL CARS : http://localhost:8080/api/createCars
+
+Get Car By Car Id
+GET CAR BY ID :  http://localhost:8080/api/getCarById/carId/6
+
+Update Car By Car Id
+PUT CAR : http://localhost:8080/api/updateCarById/carId/4
+
+Get All Cars
+GET ALL CARS : http://localhost:8080/api/getAllCars
+
+Get All Cars By Car Type
+GET ALL CARS BY Type :  http://localhost:8080/api/getCarByType/carType/AWD(All Wheel Drive) Type
+
+Get All Cars By Name - Ignore Case
+GET ALL CARS BY NAME IGNORE CASE : http://localhost:8080/api/getCarNameIgnoreCase/carName/dodge charger
+
+Get All Cars By Car Name Starting With
+GET ALL CARS BY NAME STARTING WITH : http://localhost:8080/api/getCarNameStartingWith/carName/dodge
+
+Get All Cars By Car Name Ending With
+GET ALL CARS BY NAME ENDING WITH : http://localhost:8080/api/getCarNameEndingWith/carName/charger
+
+Get All Cars By Car Name Containing
+GET ALL CARS BY NAME CONTAINING : http://localhost:8080/api/getCarNameContaining/carName/Cooper
+
+Get All Cars By Car Type and Car Color
+GET ALL CARS BY Type And Color:  http://localhost:8080/api/getCarTypeAndColor/carType/FWD(Four Wheel Drive) Type/carColor/White
+
+Get All Cars To Year
+GET ALL CARS TO YEAR BEFORE : http://localhost:8080/api/getCarToYearBefore/toYear/2021
+
+Get All Cars From Year
+GET ALL CARS FROM YEAR AFTER : http://localhost:8080/api/getCarFromYearAfter/fromYear/2017
+
+Get All Cars Year Between
+GET ALL CARS FROM YEAR BETWEEN : http://localhost:8080/api/getCarFromYearBetween/fromYear/2017/toYear/2020
+
+Get All Cars By MPG Greater Than
+GET ALL CARS BY MPG GREATER THAN : http://localhost:8080/api/getCarMpgGreaterThan/mpg/20
+
+Get All Cars By MPG Greater Than And Equal
+GET ALL CARS BY MPG GREATER THAN EQUAL : http://localhost:8080/api/getCarMpgGreaterThanEqual/mpg/40
+
+Get All Cars By MPG Less Than
+GET ALL CARS BY MPG LESS THAN : http://localhost:8080/api/getCarMpgLessThan/mpg/60
+
+Get All Cars By MPG Less Than And Equal
+GET ALL CARS BY MPG LESS THAN EQUAL : http://localhost:8080/api/getCarMpgLessThanEqual/mpg/50
+
+Get All Cars By MPGS in Collection
+GET ALL CARS BY MPG IN Collection : http://localhost:8080/api/findByCarMpgIn/mpgs/40,60
+
+Get All Cars By Car Name Based on Descending(Car MPG)
+GET ALL CAR BY NAME BASED ON DESC(CAR MPG) : http://localhost:8080/api/getCarNameOrderByCarMpgDesc/carName/Hyundai Genesis
+
+Get All Cars By Car Name Based on Ascending(Car MPG)
+GET ALL CAR BY NAME BASED ON ASC(CAR MPG) : http://localhost:8080/api/getCarNameOrderByCarMpgAsc/carName/Hyundai Genesis
+
+Get All Top 3 Cars Based on Review Points
+GET ALL TOP 3 CARS BASED ON REVIEW POINTS : http://localhost:8080/api/getTop3ByCarReviewPoints/reviewPoint/5
+
+Delete Car
+DELETE CAR :  http://localhost:8080/api/deleteCarById/carId/10

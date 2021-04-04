@@ -67,6 +67,41 @@ The criteria part contains the entity-specific condition expressions of the quer
 
  List<Car> findByCarType(String carType) --> Returns List of Cars based on provided Car Type
 
+Outcome:
+ ![](https://github.com/YashzAlphaGeek/Spring-Boot-JPA-Hibernate-Query-Methods/blob/master/imgs/Database.png)
+ 
+ ![](https://github.com/YashzAlphaGeek/Spring-Boot-JPA-Hibernate-Query-Methods/blob/master/imgs/Fetching%20Car%20By%20Type.png)
+ 
+Please find the attached source code implemented with below mentioned Query Methods,
+
+|HTTP Verb|	Functionality                                	|REST API's                                                                                    |Supported Keyword inside Methods Names|	Sample                                    |
+|:--------|:----------------------------------------------------|:---------------------------------------------------------------------------------------------|:-------------------------------------|:------------------------------------------|
+|POST     |Creating a Car                                       |http://localhost:8080/api/createCar                                                           |                                      |save(car)                                  |
+|POST     |Creating Cars                                        |http://localhost:8080/api/createCars                                                          |		                      |saveAll(cars)                              |
+|GET      |Get Car By Car Id                                    |http://localhost:8080/api/getCarById/carId/6                                                  |		                      |findById(carId)                            |
+|PUT      |Update Car By Car Id                                 |http://localhost:8080/api/updateCarById/carId/4                                               |		                      |save(car)                                  |
+|GET	  |Get All Cars                                         |http://localhost:8080/api/getAllCars                                                          |		                      |findAll()                                  |
+|GET      |Get All Cars By Car Type                             |http://localhost:8080/api/getCarByType/carType/AWD(All Wheel Drive) Type                      |		                      |findByCarType(carType)                     |
+|GET      |Get All Cars By Name - Ignore Case                   |http://localhost:8080/api/getCarNameIgnoreCase/carName/dodge charger                          |IgnoreCase                            |findByCarNameIgnoreCase(carName)           |
+|GET      |Get All Cars By Car Name Starting With               |http://localhost:8080/api/getCarNameStartingWith/carName/dodge                                |StartingWith                          |findByCarNameStartingWith(carName)         |
+|GET      |Get All Cars By Car Name Ending With                 |http://localhost:8080/api/getCarNameEndingWith/carName/charger                                |EndingWith                            |findByCarNameEndingWith(carName)           |
+|GET      |Get All Cars By Car Name Containing                  |http://localhost:8080/api/getCarNameContaining/carName/Cooper                                 |Containing	                      |findByCarNameContaining(carNameStr)        |
+|GET      |Get All Cars By Car Type and Car Color               |http://localhost:8080/api/getCarTypeAndColor/carType/FWD(Four Wheel Drive) Type/carColor/White|And	                              |findByCarTypeAndCarColor(carType, carColor)|
+|GET      |Get All Cars To Year                                 |http://localhost:8080/api/getCarToYearBefore/toYear/2021                                      |Before                                |findByCarToYearBefore(toYear)              |
+|GET      |Get All Cars From Year                               |http://localhost:8080/api/getCarFromYearAfter/fromYear/2017                                   |After                                 |findByCarFromYearAfter(fromyear)           |
+|GET      |Get All Cars Year Between                            |http://localhost:8080/api/getCarFromYearBetween/fromYear/2017/toYear/2020                     |Between	                              |findByCarFromYearBetween(fromYear, toYear) |
+|GET      |Get All Cars By MPG Greater Than                     |http://localhost:8080/api/getCarMpgGreaterThan/mpg/20                                         |GreaterThan                           |findByCarMpgGreaterThan(carMpg)            |
+|GET      |Get All Cars By MPG Greater Than And Equal           |http://localhost:8080/api/getCarMpgGreaterThanEqual/mpg/40                                    |GreaterThanEqual                      |findByCarMpgGreaterThanEqual(carMpg)       |
+|GET      |Get All Cars By MPG Less Than                        |http://localhost:8080/api/getCarMpgLessThan/mpg/60                                            |LessThan                              |	findByCarMpgLessThan(carMpg)              |
+|GET      |Get All Cars By MPG Less Than And Equal              |http://localhost:8080/api/getCarMpgLessThanEqual/mpg/50                                       |LessThanEqual                         |findByCarMpgLessThanEqual(carMpg)          |
+|GET      |Get All Cars By MPGS in Collection                   |http://localhost:8080/api/findByCarMpgIn/mpgs/40,60                                           |In	                              |findByCarMpgIn(mpgs)                       |
+|GET      |Get All Cars By Car Name Based on Descending(Car MPG)|http://localhost:8080/api/getCarNameOrderByCarMpgDesc/carName/Hyundai Genesis                 |OrderBy                               |findByCarNameOrderByCarMpgDesc(carName)    |
+|GET      |Get All Cars By Car Name Based on Ascending(Car MPG) |http://localhost:8080/api/getCarNameOrderByCarMpgAsc/carName/Hyundai Genesis                  |OrderBy                               |findByCarNameOrderByCarMpgAsc(carName)     |
+|GET      |Get All Top 3 Cars Based on Review Points            |http://localhost:8080/api/getTop3ByCarReviewPoints/reviewPoint/5                              |Top3By                                |findTop3ByCarReviewPoints(carReviewPoints) |
+|DELETE   |Delete a Car                                         |http://localhost:8080/api/deleteCarById/carId/10                                              |		                      |delete(car)                                |
+
+
+
 # Supported keywords inside method names:
  + And
  + Or
@@ -92,3 +127,7 @@ The criteria part contains the entity-specific condition expressions of the quer
  + TRUE
  + FALSE
  + IgnoreCase
+
+By piecing the query DSL keywords together with the JPA repository generics typing, you can see how Spring Data JPA can generate the JPQL for us.
+
+This, in turn, gets mapped to the actual SQL that will get issued against the database thanks to the JPA ORM framework.

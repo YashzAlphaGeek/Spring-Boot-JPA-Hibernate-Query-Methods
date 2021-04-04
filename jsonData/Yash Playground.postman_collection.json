@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "049a5a22-ae3d-409d-8f5d-0de6a1a6b7f1",
+		"name": "Yash Playground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Best Cars",
+			"item": [
+				{
+					"name": "Post a Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"carColor\":\"White\",\r\n        \"carName\": \"Hyundai Genesis\",\r\n        \"carType\": \"FWD(All Wheel Drive) Type\",\r\n        \"carFromYear\":2010,\r\n        \"carRank\":10,\r\n        \"carReviewPoints\":1,\r\n        \"carToYear\":2011,\r\n        \"carMpg\": 40,\r\n        \"carDesc\": \"Elegant and sophisticated, the Lincoln MKZ is a five-passenger midsize luxury sedan with presence. Ideal for out-of-town trips or nights on the town, you'll love how stylish the MKZ looks, while its balanced ride remains composed on rougher roads\",\r\n        \"features\": [\r\n            \"Power-open and -close trunk lid\",\r\n            \"Heated and cooled front seats\",\r\n            \"Leather-trimmed seats with perforated inserts\",\r\n            \"Blind-spot monitoring with cross-traffic alert\",\r\n            \"Voice-activated navigation system\"\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/createCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"createCar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Cars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"carName\": \"Ford Taurus\",\r\n        \"carColor\":\"Green\",\r\n        \"carFromYear\":2009,\r\n        \"carToYear\":2011,\r\n         \"carRank\":2,\r\n         \"carMpg\":40,\r\n        \"carReviewPoints\":4,\r\n        \"carType\": \"AWD(All Wheel Drive) Type\",\r\n        \"carDesc\": \"Comfortable and roomy, the Ford Taurus is a large sedan with a plush interior that's practical for your daily commute. 2017–2019 SEL and Limited trims use a 288-hp 3.5L V6 with optional AWD, or you can step up to Taurus SHO, which features standard AWD\",\r\n        \"features\": [\r\n            \"10-way power front seats with driver seat memory\",\r\n            \"Heated and cooled front seats\",\r\n            \"Rear-window power sunshade\",\r\n            \"SYNC® 3 infotainment system with eight-inch touchscreen display\",\r\n            \"Blind-spot monitor with cross-traffic alert\"\r\n        ]\r\n    },\r\n    {\r\n        \"carName\": \"Mini Cooper Clubman\",\r\n        \"carColor\":\"Red\",\r\n        \"carFromYear\":2008,\r\n        \"carToYear\":2011,\r\n         \"carRank\":3,\r\n         \"carMpg\":20,\r\n        \"carReviewPoints\":5,\r\n        \"carType\": \"FWD(Four Wheel Drive) Type\",\r\n        \"carDesc\": \"If you love the punchy driving characteristics of a Mini Cooper but need cargo space and legroom for rear-seat passengers, the Clubman is a stretched-out version that could be right for you\",\r\n        \"features\": [\r\n            \"18-inch wheels\",\r\n            \"LED headlights\",\r\n            \"Rear spoiler\",\r\n            \"Sport-tuned suspension\",\r\n            \"Simulated suede and cloth upholstery\"\r\n        ]\r\n    },\r\n    {\r\n        \"carId\": 5,\r\n        \"carColor\":\"Grey\",\r\n        \"carFromYear\":2019,\r\n        \"carToYear\":2020,\r\n         \"carRank\":6,\r\n         \"carMpg\":10,\r\n        \"carReviewPoints\":3,\r\n        \"carName\": \"Dodge Charger\",\r\n        \"carType\": \"AWD(All Wheel Drive) Type\",\r\n        \"carDesc\": \"The Dodge Charger has the sporty characteristics you crave with the four-season capability you want. You can find AWD versions on certain Charger trims, like the SE (2017), GT (2018), and SXT (2017 and 2019)\",\r\n        \"features\": [\r\n            \"19-inch aluminum wheels\",\r\n            \"LED fog lights\",\r\n            \"Dual-zone automatic climate control\",\r\n            \"Cloth upholstery\",\r\n            \"Uconnect® 4C system with an 8.4-inch touchscreen\"\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/createCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"createCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Car By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarById/carId/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarById",
+								"carId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\": 4,\r\n    \"carRank\": 6,\r\n    \"carName\": \"Dodge Charger\",\r\n    \"carType\": \"AWD(All Wheel Drive) Type\",\r\n    \"carColor\": \"Yellow\",\r\n    \"carDesc\": \"The Dodge Charger has the sporty characteristics you crave with the four-season capability you want. You can find AWD versions on certain Charger trims, like the SE (2017), GT (2018), and SXT (2017 and 2019)\",\r\n    \"features\": [\r\n        \"19-inch aluminum wheels\",\r\n        \"LED fog lights\",\r\n        \"Dual-zone automatic climate control\",\r\n        \"Cloth upholstery\",\r\n        \"Uconnect® 4C system with an 8.4-inch touchscreen\"\r\n    ],\r\n    \"carMpg\": 10,\r\n    \"carFromYear\": 2019,\r\n    \"carToYear\": 2020,\r\n    \"carReviewPoints\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/updateCarById/carId/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"updateCarById",
+								"carId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getAllCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getAllCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarByType/carType/AWD(All%20Wheel%20Drive)%20Type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarByType",
+								"carType",
+								"AWD(All%20Wheel%20Drive)%20Type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name Ignore Case",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameIgnoreCase/carName/dodge charger",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameIgnoreCase",
+								"carName",
+								"dodge charger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name Starting With",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameStartingWith/carName/dodge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameStartingWith",
+								"carName",
+								"dodge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name Ending With",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameEndingWith/carName/charger",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameEndingWith",
+								"carName",
+								"charger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name Containing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameContaining/carName/Cooper",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameContaining",
+								"carName",
+								"Cooper"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Type and Color",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarTypeAndColor/carType/FWD(Four Wheel Drive) Type/carColor/White",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarTypeAndColor",
+								"carType",
+								"FWD(Four Wheel Drive) Type",
+								"carColor",
+								"White"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars Before Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarToYearBefore/toYear/2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarToYearBefore",
+								"toYear",
+								"2021"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars After Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarFromYearAfter/fromYear/2017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarFromYearAfter",
+								"fromYear",
+								"2017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars Before Year Between",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarFromYearBetween/fromYear/2017/toYear/2020",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarFromYearBetween",
+								"fromYear",
+								"2017",
+								"toYear",
+								"2020"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By MPG Greater Than",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarMpgGreaterThan/mpg/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarMpgGreaterThan",
+								"mpg",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By MPG Greater Than Equal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarMpgGreaterThanEqual/mpg/40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarMpgGreaterThanEqual",
+								"mpg",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By MPG Less Than",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarMpgLessThan/mpg/60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarMpgLessThan",
+								"mpg",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By MPG Less Than Equal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarMpgLessThanEqual/mpg/50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarMpgLessThanEqual",
+								"mpg",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By MPG In Collection",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/findByCarMpgIn/mpgs/40,60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"findByCarMpgIn",
+								"mpgs",
+								"40,60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name in Ascending (Car MPG)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameOrderByCarMpgAsc/carName/Hyundai Genesis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameOrderByCarMpgAsc",
+								"carName",
+								"Hyundai Genesis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars By Car Name in Descending (Car MPG)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getCarNameOrderByCarMpgDesc/carName/Hyundai Genesis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getCarNameOrderByCarMpgDesc",
+								"carName",
+								"Hyundai Genesis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Top 3 Car By Review Points",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/getTop3ByCarReviewPoints/reviewPoint/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getTop3ByCarReviewPoints",
+								"reviewPoint",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/deleteCarById/carId/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"deleteCarById",
+								"carId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
